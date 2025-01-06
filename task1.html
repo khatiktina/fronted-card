@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td ><i class="fas fa-star" id="star"></i><h1 class="faq1">FAQs</h1></td>
+            <td> 
+                <section class="faq bg-light">
+                <div class="container-sm">
+                  <div class="faq-content">
+                    <div class="faq-group">
+                      <div class="faq-group-header">
+                        <h4 class="text-md">
+                          What is Frontend Mentor and, and how will it help me?
+                        </h4>
+                        <i class="fa-solid fa-circle-minus"></i>
+                      </div>
+                      <div class="faq-group-body open">
+                        <p>
+                          Frontend Mentor offer realistic coding challenges to help developers improve thairfronted coding skills with projects in HTML, Css and javaScript. it'S Suitable for all levels and Ideal for portfolio building
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq-group">
+                      <div class="faq-group-header">
+                        <h4 class="text-md">
+                          Is Frotend Mentor free?
+                        </h4>
+                        <i class="fa-solid fa-circle-plus"></i>
+                      </div>
+                      <div class="faq-group-body">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quibusdam omnis veritatis? Perferendis distinctio aliquam doloremque assumenda ea, autem veniam!
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq-group">
+                      <div class="faq-group-header">
+                        <h4 class="text-md">
+                         Can I use frontend mentor project in my portfolio
+                        </h4>
+                        <i class="fa-solid fa-circle-plus"></i>
+                      </div>
+                      <div class="faq-group-body">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                          Incidunt, a! Quaerat, voluptatum. Animi molestias ex quasi
+                          explicabo minima perferendis commodi.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="faq-group">
+                      <div class="faq-group-header">
+                        <h4 class="text-md">
+                          How can i get help if I'm stuck on a challenge?
+                        </h4>
+                        <i class="fa-solid fa-circle-plus"></i>
+                      </div>
+                      <div class="faq-group-body">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                          Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
+                          aliquid. Repellat animi quam vitae.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section></td>
+        </tr>
+    </table>
+    <script>
+        // FAQ Accordion
+document.addEventListener('DOMContentLoaded', () => {
+    const faqContainer = document.querySelector('.faq-content');
+  
+    faqContainer.addEventListener('click', (e) => {
+      const groupHeader = e.target.closest('.faq-group-header');
+  
+      if (!groupHeader) return;
+  
+      const group = groupHeader.parentElement;
+      const groupBody = group.querySelector('.faq-group-body');
+      const icon = groupHeader.querySelector('i');
+  
+      // Toggle icon
+      icon.classList.toggle('fa-circle-plus');
+      icon.classList.toggle('fa-circle-minus');
+  
+      // Toggle visibility of body
+      groupBody.classList.toggle('open');
+  
+      // Close other open FAQ bodies
+      const otherGroups = faqContainer.querySelectorAll('.faq-group');
+  
+      otherGroups.forEach((otherGroup) => {
+        if (otherGroup !== group) {
+          const otherGroupBody = otherGroup.querySelector('.faq-group-body');
+          const otherIcon = otherGroup.querySelector('.faq-group-header i');
+  
+          otherGroupBody.classList.remove('open');
+          otherIcon.classList.remove('fa-circle-minus');
+          otherIcon.classList.add('fa-circle-plus');
+        }
+      });
+    });
+  });
+  
+  // Mobile Menu
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    hamburgerButton.addEventListener('click', () =>
+      mobileMenu.classList.toggle('active')
+    );
+  });
+    </script>
+</body>
+</html>
