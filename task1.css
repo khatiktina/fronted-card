@@ -1,0 +1,84 @@
+body{
+    background-image: url('images/blue\ print.svg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-color: rgb(233, 118, 233);
+    align-items: center;
+    display: flex;
+}
+table{
+    margin: auto;
+    margin-top: 90px;
+    border: 0px solid #FAE5FB;
+    border-radius: 15px;
+    width: 400px;
+    background-color: white; 
+    align-items: center;
+}
+
+table tr td{
+    display: flex;
+}
+table tr td #star{
+    color: purple;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+}
+table tr .faq1{
+    margin-left: 12px;  
+} 
+
+
+.faq .faq-group {
+border-bottom: 1px solid #ccc;
+
+}
+
+.faq .faq-group .faq-group-header {
+padding: 5px 0;
+margin-bottom: 15px;
+position: relative;
+}
+
+.faq .faq-group .faq-group-header h4 {
+font-weight: 600;
+width: 95%;
+}
+
+.faq .faq-group .faq-group-header i {
+position: absolute;
+right: 0;
+top: 20px;
+font-size: 1.3rem;
+cursor: pointer;
+
+}
+
+.faq .faq-group .faq-group-body {
+display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+display: block;
+}
+.faq-group .faq-group-header .fa-circle-plus{
+color: purple;
+}
+faq-group .faq-group-header .fa-circle-plus{
+color: purple;
+}
+@media (max-width: 960px) {
+.text-xxl {
+font-size: 2.5rem;
+}
+}
+
+@media (max-width: 670px) {
+.table .table tr {
+display: none;
+}
+.faq .faq-content {
+display: none;
+}
+}
